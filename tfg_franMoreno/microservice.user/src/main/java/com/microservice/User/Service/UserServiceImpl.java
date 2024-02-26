@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service // IMPORTANTE EL DECORADOR
 public class UserServiceImpl implements InterfaceUserService{
 
     ////////////////////// INYECCION METODOS REPOSITORIO ///////////////////////////////////
