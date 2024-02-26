@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- ~~~~~~~~~ Especificamos que el padre del proyecto va a ser springboot ~~~~~~~~~  -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.2</version>
+    <relativePath/>
+  </parent>
+
+  <!-- ~~~~~~~~~ Estas etiquetas deberan tenerlas todos los hijos ~~~~~~~~~  -->
+
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>tfg_franMoreno</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <!-- ~~~~~~~~~ Especificamos que va a ser un proyecto padre ~~~~~~~~~  -->
+
+  <name>tfg_franMoreno</name>
+  <packaging>pom</packaging>
+
+  <!-- ~~~~~~~~~ Añadimos aqui los modulos hijos, que se reconocen automaticamente  ~~~~~~~~~  -->
+
+  <modules>
+    <module>microservice.gateway</module>
+    <module>microservice.eureka</module>
+    <module>microservice.configServer</module>
+    <module>microservice.user</module>
+    <module>microservice.timeLine</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <!-- ~~~~~~~~~ Dependencias comunes que heredaran todos los hijos ~~~~~~~~~  -->
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.30</version>
+    </dependency>
+  </dependencies>
+
+  <!-- ~~~~~~~~~Plugin de SpringBoot ~~~~~~~~~  -->
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
