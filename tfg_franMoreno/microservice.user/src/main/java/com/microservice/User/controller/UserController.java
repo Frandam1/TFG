@@ -38,4 +38,14 @@ public class UserController {
     public ResponseEntity<?> findById(@PathVariable Long id){
         return ResponseEntity.ok(interfaceUserService.findById(id));
     }
+
+    ////////////////////// CUARTO ENDPOINT: COMUNICACION CON TIMELINE ///////////////////////////////////
+
+    /* este controlador recibe una solicitud para buscar usuarios por su línea de tiempo,
+    llama al servicio correspondiente para realizar la búsqueda en la base de datos,
+    y luego devuelve los resultados como una respuesta HTTP. */
+    @GetMapping("/search/{timeLineId}")// Entre llaves porque sera variable
+    public ResponseEntity<?> findByIdTimeLine(@PathVariable Long idTimeline){
+        return ResponseEntity.ok(interfaceUserService.findByIdTimeLine(idTimeline));
+    }
 }
