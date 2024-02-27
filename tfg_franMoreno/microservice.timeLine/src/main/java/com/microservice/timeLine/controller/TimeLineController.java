@@ -35,6 +35,13 @@ public class TimeLineController {
     @GetMapping("/search/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id){
         return ResponseEntity.ok(interfaceTimeLineService.findById(id));
-}
+    }
+
+    ////////////////////// CUARTO ENDPOINT: RESPUESTA MCSV CON INFO DE OTRO MCSV    ///////////////////////////////////
+
+    @GetMapping("/search-user/{idTimeLine}")
+    public ResponseEntity<?> findUsersByIdTimeLine(@PathVariable Long idTimeLine){
+        return ResponseEntity.ok(interfaceTimeLineService.findUsersByIdTimeLine(idTimeLine));
+    }
 
 }
