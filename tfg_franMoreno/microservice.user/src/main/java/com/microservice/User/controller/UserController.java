@@ -44,8 +44,8 @@ public class UserController {
     /* este controlador recibe una solicitud para buscar usuarios por su línea de tiempo,
     llama al servicio correspondiente para realizar la búsqueda en la base de datos,
     y luego devuelve los resultados como una respuesta HTTP. */
-    @GetMapping("/search-by-timeline/{timeLineId}")// Entre llaves porque sera variable
-    public ResponseEntity<?> findByIdTimeLine(@PathVariable Long idTimeline){
-        return ResponseEntity.ok(interfaceUserService.findByIdTimeLine(idTimeline));
+    @GetMapping("/search-by-timeline/{idTimeLine}")// Entre llaves porque sera variable
+    public ResponseEntity<?> findByIdTimeLine(@PathVariable Long idTimeLine){
+        return ResponseEntity.ok(interfaceUserService.findByIdTimeLine(idTimeLine));
     }
 }

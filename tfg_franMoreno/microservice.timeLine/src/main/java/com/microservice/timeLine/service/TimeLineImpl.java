@@ -6,9 +6,11 @@ import com.microservice.timeLine.entities.TimeLine;
 import com.microservice.timeLine.http.response.UserByTimeLineResponse;
 import com.microservice.timeLine.persistence.TimeLineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TimeLineImpl implements InterfaceTimeLineService{
 
     @Autowired

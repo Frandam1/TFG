@@ -13,6 +13,6 @@ public interface UserClient {
 
     //Feign arma la peticion http para la consulta
     //Al no poder recibir entities, tenemos que crear un dto y pasarlo a la lista
-    @GetMapping("/search-by-timeline/{timeLineId}")
-    List<UserDTO> findAllUserByTimeLine(@PathVariable Long idTimeline);
+    @GetMapping("/search-by-timeline/{idTimeLine}")
+    List<UserDTO> findAllUserByTimeLine(@PathVariable Long idTimeLine);
 }
