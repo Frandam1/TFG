@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 //Aqui ponemos el microservicio al que va a asociarse, el puerto
-@FeignClient(name= "microservice-user", url = "localhost:8090/app/user")
+@FeignClient(name= "microservice-user", url = "localhost:8080/app/user")
 public interface UserClient {
 
     //Feign arma la peticion http para la consulta
