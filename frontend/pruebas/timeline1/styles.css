@@ -1,0 +1,24 @@
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: gray;
+    position: relative; /* Añadir posición relativa */
+  }
+  
+  .entry {
+    margin-bottom: 20px;
+    background-color: beige;
+    border-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    left: -30px; /* Ajusta la posición de la línea */
+    width: 20px; /* Ancho de la línea */
+    background-color: orange; /* Color de la línea */
+    z-index: 1; /* Asegurarse de que la línea esté detrás de las entradas */
+  }
+  

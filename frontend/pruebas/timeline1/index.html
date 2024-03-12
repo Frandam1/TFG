@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline Interactivo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="timeline" id="timeline">
+    <!-- Añade la línea vertical aquí, puede estar vacía por ahora -->
+    <div class="timeline-line"></div>
+    <div class="entry">
+      <input type="date" id="date" class="form-control" style="display: none;">
+      <textarea id="comment" class="form-control" placeholder="Añadir comentario" style="display: none;"></textarea>
+      <button onclick="addEntry()" class="btn btn-primary" style="display: none;">Añadir</button>
+    </div>
+  </div>
+  <button onclick="toggleForm()" class="btn btn-success">+</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
